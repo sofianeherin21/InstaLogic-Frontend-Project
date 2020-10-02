@@ -196,8 +196,7 @@ a:hover {
 
 .socials {
   padding: 0rem 0;
-  
-  margin-right: auto;
+
 
 }
 
@@ -391,6 +390,7 @@ a:hover {
 }
 
 @keyframes slideBg {
+
   0%{
     background-image: url('../img/bg1.png');
   }
@@ -400,9 +400,32 @@ a:hover {
   100%{
     background-image: url('../img/bg3.png');
   }
-  150%{
-    background-image: url('../img/bg1.png');
+  
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
   }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
 }
 /*======================================
 //--//-->   HEADER
@@ -702,7 +725,10 @@ a:hover {
 /*======================================
 //--//-->   ABOUT
 ======================================*/
-
+#about{
+  opacity: 0;
+  
+}
 .about-mf .box-shadow-full {
   padding-top: 4rem;
   padding-bottom: 4rem;
@@ -724,7 +750,10 @@ a:hover {
 //--//-->   SERVICES
 ======================================*/
 
-
+#service{
+  opacity: 0;
+  
+}
 
 
 /*======================================
@@ -762,7 +791,7 @@ a:hover {
 }
 
 /*======================================
-//--//-->   PORTFOLIO
+//--//-->   Services
 ======================================*/
 
 .work-box {
@@ -854,17 +883,44 @@ a:hover {
 //--//-->   ROOF TYPES
 ======================================*/
 
+#product{
+  opacity: 0;
+}
 .img-box{
-  padding: 0.5rem 0.5rem 2rem 0.5rem; 
+  padding: 0.5rem 0.5rem 2rem 0.5rem;
+  overflow: hidden;
+  height: 80%; 
 }
 .img-box img{
   height: 300px;
+  opacity: 0.8;
+}
+.img-box img:hover{
+
+  -webkit-transform: scale(1.3);
+  transform: scale(1.3);
+  opacity: 1;
+
 }
 .hidden{display: none;}
 
-
-
-
+#gallery{
+  opacity: 0;
+}
+.follow-btn{
+  background: black;
+  color:white;
+  z-index: 1030;
+  font-size: 14px;
+  opacity: 0.7;
+  line-height: 1.3;
+  position: absolute;
+  margin: 5% 45% 10% 45%;
+  border-radius: 50%;
+  height: 150px;
+  width: 150px;
+  
+}
 
 /*======================================
 //--//-->   CONTACT
@@ -872,6 +928,14 @@ a:hover {
 #contact{
   font-size: 12px;
 }
+#contact .socials .ico-circle {
+  
+  border-color: #ff7314;
+  background-color: #ffffff00 ;
+  color: white;
+
+  
+ }
 .footer-paralax {
   padding: 4rem 0 0 0;
 }
@@ -1039,7 +1103,17 @@ footer .credits a {
   color: white;
   transition: all 500ms ease;
  }
-
+ #contact .socials .ico-circle {
+  
+  border-color: #ff7314;
+  background-color: #ffffff00 ;
+  color: #ff7314;
+  
+ }
+ .navbar-expand-md .navbar-nav .nav-link{
+    font-size: 0.8rem;
+  }
+ 
 }
 
 @media (min-width: 992px) {
@@ -1048,10 +1122,9 @@ footer .credits a {
      font-size: 13px;
 
   }
-  .socials .ico-circle {
-    margin-right: 10px;
-  }
+  
 }
+
 
 @media (min-width: 1200px) {
   .testimonial-box .description {

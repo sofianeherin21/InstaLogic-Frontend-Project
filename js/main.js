@@ -93,17 +93,7 @@
 		}
 	});
 
-	/*--/ Start Typed /--*/
-	if ($('.text-slider').length == 1) {
-    var typed_strings = $('.text-slider-items').text();
-		var typed = new Typed('.text-slider', {
-			strings: typed_strings.split(','),
-			typeSpeed: 80,
-			loop: true,
-			backDelay: 1100,
-			backSpeed: 30
-		});
-	}
+	
 
 	/*--/ Testimonials owl /--*/
 	$('#testimonial-mf').owlCarousel({
@@ -138,9 +128,36 @@
         loop:true,
         
         onSliderLoad: function() {
-            $('#autoWidth').removeClass('hidden');
+            $('.autoWidth').removeClass('cs-hidden');
         } 
-    });  
+    });
+
+    // Animations
+
+    $('#about').waypoint(function() {
+	$('#about').css({
+	animation: "fadeInUp 2s linear forwards",
+	opacity:"1"
+	});
+	}, { offset: '80%' }); 
+
+    $('#service').waypoint(function() {
+	$('#service').css({
+	animation: "fadeIn 2s linear forwards",
+	});
+	}, { offset: '80%' });
+
+	$('#product').waypoint(function() {
+	$('#product').css({
+	animation: "fadeIn 2s linear forwards",
+	});
+	}, { offset: '80%' });
+
+	$('#gallery').waypoint(function() {
+	$('#gallery').css({
+	animation: "fadeIn 2s linear forwards",
+	});
+	}, { offset: '80%' });  
 
 
 })(jQuery);
