@@ -76,14 +76,12 @@
 		var pixels = 50;
 		var top = 1200;
 		if ($(window).scrollTop() > pixels) {
-			$('.navbar-expand-md').addClass('navbar-reduce');
-			$('.navbar-expand-md').removeClass('navbar-trans');
+			
 			$('.navbar-b .navbar-brand img').css('margin-top',0);
 			$('.navbar-b .navbar-brand img').css('height',"70px");
 
 		} else {
-			$('.navbar-expand-md').addClass('navbar-trans');
-			$('.navbar-expand-md').removeClass('navbar-reduce');
+			
 			$('.navbar-b .navbar-brand img').css('margin-top',"-5rem");
 			$('.navbar-b .navbar-brand img').css('height',"100px");
 
