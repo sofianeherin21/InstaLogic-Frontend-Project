@@ -127,5 +127,16 @@
 		}
 	});
 
+	// Image Slider
+
+	$('#autoWidth').lightSlider({
+        autoWidth:true,
+        loop:true,
+        
+        onSliderLoad: function() {
+            $('#autoWidth').removeClass('hidden');
+        } 
+    });  
+
 
 })(jQuery);

@@ -17,7 +17,6 @@ body {
 
 h1,
 h2,
-h3,
 h4,
 h5,
 h6 {
@@ -954,6 +953,13 @@ a:hover {
 //--//-->   BLOG
 ======================================*/
 
+.img-box{
+  padding: 0.5rem 0.5rem 2rem 0.5rem; 
+}
+.img-box img{
+  height: 300px;
+}
+.hidden{display: none;}
 .card-blog .card-body {
   position: relative;
 }
