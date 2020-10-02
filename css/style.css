@@ -1,9 +1,3 @@
-/*
-  Theme Name: DevFolio
-  Theme URL: https://bootstrapmade.com/devfolio-bootstrap-portfolio-html-template/
-  Author: BootstrapMade.com
-  License: https://bootstrapmade.com/license/
-*/
 
 /*======================================
 //--//-->   STYLES GENERALES
@@ -13,6 +7,7 @@ body {
   background-color: #ffffff;
   color: #4e4e4e;
   font-family: 'Raleway', sans-serif;
+  overflow-x: hidden;
 }
 
 h1,
@@ -94,7 +89,8 @@ a:hover {
 }
 
 .overlay-mf {
-  background-color: #272424;
+  background-image: linear-gradient(to right,#232020, #383434,#232020);
+  
   position: absolute;
   top: 0;
   left: 0px;
@@ -103,7 +99,20 @@ a:hover {
   width: 100%;
 
 }
-
+.gradient-col{
+  display: flex;
+  direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(to bottom,#383434,#232020);
+}
+.normal-col{
+ display: flex;
+  direction: column;
+  justify-content: center;
+  align-items: center;
+ 
+}
 .paralax-mf {
   position: relative;
   padding: 5rem 0;
@@ -215,11 +224,11 @@ a:hover {
 }
 
 .socials .ico-circle {
-  height: 40px;
-  width: 40px;
-  font-size: 1.7rem;
+  height: 30px;
+  width: 30px;
+  font-size: 1.5rem;
   border-radius: 50%;
-  line-height: 1.4;
+  line-height: 1.3;
   margin: 0 15px 0 0;
   background-color: #ff7314;
   box-shadow: 0 0 0 3px #ff7314;
@@ -237,11 +246,7 @@ a:hover {
 
 .ul-resect,
 .socials ul,
-.list-ico,
-.blog-wrapper .post-meta ul,
-.box-comments .list-comments,
-.widget-sidebar .list-sidebar,
-.widget-tags ul {
+.list-ico {
   list-style: none;
   padding-left: 0;
   margin-bottom: 0;
@@ -585,6 +590,12 @@ a:hover {
   top:-10%;
   z-index: 2000;
   margin-top: -5rem;
+  height:80%;
+}
+.navbar-b .navbar-reduce .navbar-brand img {
+  top:0;
+  z-index: 2000;
+  margin-top: 0;
   height:80%;
 }
 
@@ -939,8 +950,8 @@ a:hover {
 
 .testimonial-box .comit {
   font-size: 2rem;
-  color: #ff7314;
-  background-color: #fff;
+  color: white;
+ 
   width: 52px;
   height: 52px;
   display: block;
@@ -950,7 +961,7 @@ a:hover {
 }
 
 /*======================================
-//--//-->   BLOG
+//--//-->   Roof Types
 ======================================*/
 
 .img-box{
@@ -964,188 +975,8 @@ a:hover {
   position: relative;
 }
 
-.card-blog .card-category-box {
-  position: absolute;
-  text-align: center;
-  top: -16px;
-  left: 15px;
-  right: 15px;
-  line-height: 25px;
-  overflow: hidden;
-}
 
-.card-blog .card-category {
-  display: inline-block;
-  color: #fff;
-  padding: 0 15px 5px;
-  overflow: hidden;
-  background-color: #ff7314;
-  border-radius: 4px;
-}
 
-.card-blog .card-category .category {
-  color: #fff;
-  display: inline-block;
-  text-transform: uppercase;
-  font-size: .7rem;
-  letter-spacing: .1px;
-  margin-bottom: 0;
-}
-
-.card-blog .card-title {
-  font-size: 1.3rem;
-  margin-top: .6rem;
-}
-
-.card-blog .card-description {
-  color: #4e4e4e;
-}
-
-.card-blog .post-author {
-  display: inline-block;
-}
-
-.card-blog .post-date {
-  color: #4e4e4e;
-  display: inline-block;
-  float: right;
-}
-
-/*======================================
-//--//-->   BLOG-SINGLE
-======================================*/
-
-.post-box,
-.form-comments,
-.box-comments,
-.widget-sidebar {
-  padding: 2rem;
-  background-color: #fff;
-  margin-bottom: 3rem;
-}
-
-.blog-wrapper .article-title {
-  font-size: 1.5rem;
-}
-
-.blog-wrapper .post-meta {
-  margin: 1rem 0;
-}
-
-.blog-wrapper .post-meta ul {
-  border-left: 4px solid #ff7314;
-  margin-top: 1rem;
-}
-
-.blog-wrapper .post-meta ul li {
-  display: inline-block;
-  margin-left: 15px;
-}
-
-.blog-wrapper .post-meta ul a {
-  color: #ff7314;
-}
-
-.blog-wrapper .post-meta ul span {
-  color: #1e1e1e;
-}
-
-.blog-wrapper .blockquote {
-  border-left: 4px solid #ff7314;
-  padding: 18px;
-  font-style: italic;
-}
-
-/*------/ Comments /------*/
-
-.box-comments .list-comments li {
-  padding-bottom: 40px;
-}
-
-.box-comments .list-comments .comment-avatar {
-  display: table-cell;
-  vertical-align: top;
-}
-
-.box-comments .list-comments .comment-avatar img {
-  width: 80px;
-  height: 80px;
-}
-
-.box-comments .list-comments .comment-author {
-  font-size: 1.3rem;
-}
-
-.box-comments .list-comments .comment-details {
-  display: table-cell;
-  vertical-align: top;
-  padding-left: 25px;
-}
-
-.box-comments .list-comments a {
-  color: #ff7314;
-}
-
-.box-comments .list-comments span {
-  color: #1e1e1e;
-  font-style: italic;
-}
-
-.box-comments .comment-children {
-  margin-left: 40px;
-}
-
-/*------/ Sidebar /------*/
-
-.widget-sidebar .sidebar-title {
-  font-size: 1.6rem;
-  font-weight: 600;
-  border-left: 5px solid #ff7314;
-  padding-left: 15px;
-  text-transform: uppercase;
-  margin-bottom: 1.5rem;
-}
-
-.widget-sidebar .list-sidebar li {
-  position: relative;
-  padding: 6px 0 6px 24px;
-}
-
-.widget-sidebar .list-sidebar li:before {
-  position: absolute;
-  content: "";
-  width: 10px;
-  height: 1px;
-  left: 0;
-  background-color: #ff7314;
-  top: 20px;
-}
-
-.sidebar-search input {
-  background-color: #fff;
-  border-radius: 0;
-  transition: all 0.5s ease-in-out;
-}
-
-.sidebar-search .btn-search {
-  background-color: #ff7314;
-  border-color: #ff7314;
-  border-radius: 0;
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
-.widget-tags ul li {
-  display: inline-block;
-  background-color: #ff7314;
-  padding: .2rem .6rem;
-  margin-bottom: .5rem;
-  border-radius: 15px;
-}
-
-.widget-tags ul li a {
-  color: #fff;
-}
 
 /*======================================
 //--//-->   CONTACT
@@ -1181,43 +1012,7 @@ footer .credits a {
   color: #fff;
 }
 
-/*======================================
-//--//-->   CONtaCT FORM
-======================================*/
 
-#sendmessage {
-  color: #ff7314;
-  border: 1px solid #ff7314;
-  display: none;
-  text-align: center;
-  padding: 15px;
-  font-weight: 600;
-  margin-bottom: 15px;
-}
-
-#errormessage {
-  color: red;
-  display: none;
-  border: 1px solid red;
-  text-align: center;
-  padding: 15px;
-  font-weight: 600;
-  margin-bottom: 15px;
-}
-
-#sendmessage.show,
-#errormessage.show,
-.show {
-  display: block;
-}
-
-.validation {
-  color: red;
-  display: none;
-  margin: 0 0 20px;
-  font-weight: 400;
-  font-size: 13px;
-}
 
 /*======================================
 //--//-->   BUTTON
@@ -1324,20 +1119,7 @@ footer .credits a {
     padding: 0 5rem;
   }
 
-  .post-box,
-  .form-comments,
-  .box-comments,
-  .widget-sidebar {
-    padding: 3rem;
-  }
-
-  .blog-wrapper .article-title {
-    font-size: 1.9rem;
-  }
-
-  .box-comments .list-comments .comment-author {
-    font-size: 1.5rem;
-  }
+  
 }
 
 @media (min-width: 992px) {
