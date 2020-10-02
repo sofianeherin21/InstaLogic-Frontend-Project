@@ -136,7 +136,7 @@
 
     $('#about').waypoint(function() {
 	$('#about').css({
-	animation: "fadeInUp 2s linear forwards",
+	animation: "fadeIn 2s linear forwards",
 	opacity:"1"
 	});
 	}, { offset: '80%' }); 
