@@ -11,6 +11,7 @@ body {
   background-color: #ffffff;
   color: #4e4e4e;
   font-family: "Raleway", sans-serif;
+  width: 100vw;
   overflow-x: hidden;
 }
 
@@ -249,6 +250,7 @@ a:hover {
   text-align: center;
   margin-top: 18px;
 }
+
 .owl-theme .owl-dots .owl-dot {
   display: inline-block;
 }
@@ -400,6 +402,11 @@ a:hover {
   animation-name: fadeIn;
 }
 
+.items-center {
+  justify-content: center;
+  align-items: center;
+}
+
 /*======================================
 //--//-->   HEADER
 ======================================*/
@@ -470,15 +477,18 @@ a:hover {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
 }
-.navbar-b .navbar-reduce {
+
+.navbar-b.navbar-reduce {
   box-shadow: 0px 6px 9px 0px rgba(0, 0, 0, 0.06);
 }
-.navbar-b .navbar-reduce .nav-item {
+
+.navbar-b.navbar-reduce .nav-item {
   position: relative;
   padding-right: 10px;
   padding-left: 0;
 }
-.navbar-b .navbar-reduce .nav-link {
+
+.navbar-b.navbar-reduce .nav-link {
   color: #605d5d;
   text-transform: uppercase;
   font-weight: 600;
@@ -553,7 +563,9 @@ a:hover {
 }
 
 .navbar-b .navbar-brand img {
+  top: -10%;
   z-index: 2000;
+  margin-top: -5rem;
   height: 80%;
 }
 
@@ -1067,22 +1079,11 @@ footer .credits a {
     height: 70%;
     width: 70%;
   }
-
-  .navbar-b .navbar-brand img {
-    top: 0;
-    z-index: 2000;
-    margin-top: 0;
-    height: 70%;
-  }
 }
 @media (min-width: 992px) {
   .testimonial-box .description {
     padding: 0 1rem 1rem 1rem;
     font-size: 13px;
-  }
-
-  .navbar-b .navbar-brand img {
-    margin-top: -5rem;
   }
 }
 @media (min-width: 1200px) {
